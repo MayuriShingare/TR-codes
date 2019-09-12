@@ -1,10 +1,10 @@
 ---
- - name: Tech M banner login 
+ - name: Tech M banner login
    connection: network_cli
    gather_facts: all
    hosts: all
-   tasks: 
- 
+   tasks:
+
      - name: Configuring login banner
        ios_banner:
           banner: login
@@ -30,9 +30,5 @@
              !  of Tech Mahindra information assets.                                                !
              !                                                                             !
              !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   
 
-
-
-       state: present 
-      
+          state: present

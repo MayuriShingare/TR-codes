@@ -6,7 +6,7 @@
   
   - name: cisco access list on devices 
     ios_config:
-	lines:
+    lines:
     access-list 83 remark *** TECH M WRITE ACCESS  ***
     access-list 83 permit 10.178.0.132 0.0.0.0
     access-list 83 permit 10.178.0.133 0.0.0..0

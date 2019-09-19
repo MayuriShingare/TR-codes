@@ -1,11 +1,11 @@
   - name: load new acl into device
     ios_config:
       lines:
-        -  permit ip host 1.1.1.1 any log
-        -  permit ip host 2.2.2.2 any log
-        -  permit ip host 3.3.3.3 any log
-        -  permit ip host 4.4.4.4 any log
-        -  permit ip host 5.5.5.5 any log
+        -  permit 1.1.1.1 0.0.0.0 log
+        -  permit 2.2.2.2 0.0.0.0 log
+        -  permit 3.3.3.3 0.0.0.0 log
+        -  permit 4.4.4.4 0.0.0.0 log
+        -  permit 5.5.5.5 0.0.0.0 log
       parents: ip access-list extended test
       before: no ip access-list extended test
       match: strict

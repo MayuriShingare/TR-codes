@@ -1,0 +1,26 @@
+- name:	Configuring SNMP
+  hosts: Configure SNMP 
+  connection: local
+  gather_facts: no
+  tasks:
+  
+  - name: Configure SNMP
+    ios_config:
+     lines:
+     - no snmp-server host 10.178.0.132 TECHMRO
+     - no snmp-server host 10.178.0.133 TECHMRO
+     - no snmp-server host 10.178.0.134 TECHMRO
+     - no snmp-server host 10.177.0.132 TECHMRO
+     - no snmp-server host 10.177.0.133 TECHMRO
+     - no snmp-server host 10.177.0.134 TECHMRO
+	 
+     after:
+     - snmp-server host 10.178.0.132 TECHMRW
+     - snmp-server host 10.178.0.133 TECHMRW
+     - snmp-server host 10.178.0.134 TECHMRW
+     - snmp-server host 10.177.0.132 TECHMRW
+     - snmp-server host 10.177.0.133 TECHMRW
+     - snmp-server host 10.177.0.134 TECHMRW
+	 
+     match: exact
+     replace: block

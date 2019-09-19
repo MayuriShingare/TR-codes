@@ -13,7 +13,6 @@
      - no snmp-server host 10.177.0.132 TECHMRO
      - no snmp-server host 10.177.0.133 TECHMRO
      - no snmp-server host 10.177.0.134 TECHMRO
-	 
      after:
      - snmp-server host 10.178.0.132 TECHMRW
      - snmp-server host 10.178.0.133 TECHMRW

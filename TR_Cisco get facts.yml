@@ -6,13 +6,13 @@
   gather_facts: yes
   tasks:
 
-    -name: gather ios_facts
+   - name: gather ios_facts
      ios_facts:
-     register: version
+      register: version
 
-    - debug:
+   - debug:
         msg: "{{version}}"
 
-    -name: collect default set of facts and configuration
+   - name: collect default set of facts and configuration
      ios_facts:
        gather_subset: config

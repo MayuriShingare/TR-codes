@@ -1,0 +1,10 @@
+- name:	Configuring new access list on devices 
+  hosts: cisco access list on devices 
+  connection: local
+  gather_facts: no
+  tasks:
+  
+  - name: cisco access list on devices 
+    ios_config:
+      src:C:\Users\ms00473249\Desktop\Ansible\TR_Codes\access list inventory.yml
+

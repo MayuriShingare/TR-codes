@@ -2,9 +2,15 @@
   hosts: cisco access list on devices 
   connection: local
   gather_facts: no
+  vars:
+    creds:
+      host: "{{ R5 }}"
+      username: "{{ root }}"
+      password: "{{ root123 }}"
   tasks:
   
   - name: cisco access list on devices 
     ios_config:
+      provider: "{{ creds }}"
       src:C:\Users\ms00473249\Desktop\Ansible\TR_Codes\access list inventory.yml
 
